@@ -130,7 +130,7 @@ const TokenSales = () => {
             <div className="info-list">
               <div className="info-item">
                 <span className="info-label">EVENT STARTS</span>
-                <span className="info-value">JANUARY 01, 2025</span>
+                <span className="info-value">NOVEMBER 01, 2025</span>
               </div>
               <div className="info-item">
                 <span className="info-label">EVENT ENDS</span>
