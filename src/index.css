@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+:root {
+  --background: 0 0% 5%;
+  --foreground: 0 0% 98%;
+
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 8%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 250 100% 65%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 200 100% 50%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+
+  --accent: 250 100% 65%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 250 100% 65%;
+
+  --radius: 0.75rem;
+
+  --gradient-primary: linear-gradient(135deg, hsl(250 100% 65%), hsl(200 100% 50%));
+  --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 8%));
+  
+  --shadow-glow: 0 0 40px hsl(250 100% 65% / 0.3);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Ensure all elements stay within viewport */
+* {
+  max-width: 100%;
+}
+
+/* Specific element constraints */
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container constraints */
+.container, .section, .hero, .features, .advisors, .roadmap,
+.navbar-container, .features-container, .advisors-container, .roadmap-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Force all sections to be contained */
+section {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Mobile responsiveness - STRICT no horizontal scroll */
+@media (max-width: 800px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Strict containment for mobile */
+  * {
+    max-width: 100vw !important;
+  }
+  
+  /* Ensure all containers are properly constrained */
+  .container, .section, .hero, .features, .advisors, .roadmap,
+  .navbar-container, .features-container, .advisors-container, .roadmap-container {
+    max-width: 100vw !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Force all content to stay within safe area */
+  .hero-content, .features-grid, .advisors-content, .roadmap-content {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Prevent any absolute positioned elements from causing overflow */
+  .absolute, .fixed {
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .container, .section, .hero, .features, .advisors, .roadmap,
+  .navbar-container, .features-container, .advisors-container, .roadmap-container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+/* Crypto ticker exceptions - allow animation to work properly */
+.ticker-content,
+.ticker-content * {
+  max-width: none !important;
+  width: auto !important;
+}
+
+/* Ensure ticker rows can animate properly */
+.ticker-row {
+  max-width: 100vw !important;
+  overflow: hidden !important;
+}
+/* Debug helper - uncomment if you need to find what's causing overflow */
+/*
+* {
+  outline: 1px solid red !important;
+}
+*/
