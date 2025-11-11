@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import AnimatedBackground from "../components/AnimatedBackground";
 import Hero from "../components/Hero";
 import CryptoTicker from "../components/CryptoTicker";
+import Testimonials from "../components/Testimonials";
 import Features from "../components/Features";
 import TokenSales from "../components/TokenSales";
 import Roadmap from "../components/Roadmap";
@@ -15,6 +16,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <CryptoTicker />
+      <Testimonials />
       <Features />
       <TokenSales />
       <Roadmap />
