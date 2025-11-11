@@ -48,6 +48,7 @@ const Navbar = () => {
 
         <div className="navbar-links">
           <button onClick={() => handleNavClick("home")}>HOME</button>
+          <button onClick={() => handleNavClick("testimonials")}>REVIEWS</button>
           <button onClick={() => handleNavClick("features")}>FEATURES</button>
           <button onClick={() => handleNavClick("roadmap")}>ROADMAP</button>
           <button onClick={() => handleNavClick("token")}>TOKEN</button>
@@ -72,6 +73,7 @@ const Navbar = () => {
               <X size={24} />
             </button>
             <button onClick={() => handleNavClick("home")}>HOME</button>
+            <button onClick={() => handleNavClick("testimonials")}>REVIEWS</button>
             <button onClick={() => handleNavClick("features")}>FEATURES</button>
             <button onClick={() => handleNavClick("roadmap")}>ROADMAP</button>
             <button onClick={() => handleNavClick("token")}>TOKEN</button>
