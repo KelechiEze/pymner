@@ -69,7 +69,7 @@ const Hero = () => {
   };
 
   const redirectToDashboard = () => {
-    window.open("https://kryptorn.netlify.app/", "_blank");
+    window.open("https://pacoinminers.netlify.app/", "_blank");
   };
 
   return (
