@@ -82,13 +82,12 @@ const Hero = () => {
               AI-POWERED CRYPTO MINING
             </div>
             <h1 className="hero-title">
-              Start Mining
+              Mine & Invest In
               <br />
-              <span className="gradient-text">Bitcoin</span> Today
+              <span className="gradient-text">CryptoCurrency</span> Today
             </h1>
             <p className="hero-subtitle">
-              Register, connect your account, and let our AI mine Bitcoin for you. 
-              Withdraw after reaching $6,000 in just 3-4 days.
+             Register and start mining Bitcoin with our AI or invest in our diversified crypto portfolio. Mine up to $6,000 in 3-4 days or grow your wealth through strategic investments.
             </p>
             <div className="hero-buttons">
               <button 
