@@ -66,7 +66,7 @@ const TokenSales = () => {
   }, []);
 
   const redirectToDashboard = () => {
-    window.open("https://paycoin-dashboard.netlify.app/", "_blank");
+    window.open("https://pacoinminers.netlify.app/", "_blank");
   };
 
   return (

@@ -41,6 +41,12 @@ const InvestmentOpportunity = () => {
     e.currentTarget.src = fallbackImages[index];
   };
 
+  // Function to handle Start Investing button click
+  const handleStartInvesting = () => {
+    // Open the external URL in a new tab
+    window.open('https://pacoinminers.netlify.app/', '_blank', 'noopener,noreferrer');
+  };
+
   useEffect(() => {
     gsap.fromTo(
       ".opportunity-content",
@@ -105,7 +111,7 @@ const InvestmentOpportunity = () => {
                 <DollarSign size={20} />
               </div>
               <div className="feature-text">
-                <h4>Minimum $500 Investment</h4>
+                <h4>Minimum $1000 Investment</h4>
                 <p>Start building wealth with low entry</p>
               </div>
             </div>
@@ -120,7 +126,10 @@ const InvestmentOpportunity = () => {
             </div>
           </div>
 
-          <button className="opportunity-btn">
+          <button 
+            className="opportunity-btn"
+            onClick={handleStartInvesting}
+          >
             Start Investing Today
             <ArrowRight size={20} />
           </button>

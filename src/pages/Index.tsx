@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import CryptoTicker from "../components/CryptoTicker";
 import InvestmentOpportunity from "../components/InvestmentOpportunity";
 import InvestmentServices from "../components/InvestmentServices";
+import InvestmentPlans from "../components/InvestmentPlans";
 import Testimonials from "../components/Testimonials";
 import Features from "../components/Features";
 import TokenSales from "../components/TokenSales";
@@ -18,6 +19,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <CryptoTicker />
+      <InvestmentPlans />
       <InvestmentOpportunity />
       <InvestmentServices />
       <Testimonials />
