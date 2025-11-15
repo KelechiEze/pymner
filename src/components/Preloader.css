@@ -1,0 +1,135 @@
+/* Preloader Container */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(17, 24, 39);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  perspective: 1000px;
+}
+
+/* Cube Container */
+.cube {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  transform-style: preserve-3d;
+}
+
+@media (min-width: 768px) {
+  .cube {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+/* Cube Faces - Base Styles */
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 58, 138, 0.4);
+  border: 1px solid rgb(96, 165, 250);
+}
+
+/* Front Face */
+.cube-front {
+  transform: translateZ(2.5rem);
+}
+
+/* Right Face */
+.cube-right {
+  transform: rotateY(90deg) translateX(2.5rem);
+  transform-origin: center right;
+}
+
+/* Back Face */
+.cube-back {
+  transform: rotateY(180deg) translateZ(2.5rem);
+}
+
+/* Left Face */
+.cube-left {
+  transform: rotateY(-90deg) translateX(-2.5rem);
+  transform-origin: center left;
+}
+
+/* Top Face */
+.cube-top {
+  transform: rotateX(90deg) translateY(2.5rem);
+  transform-origin: top center;
+}
+
+/* Bottom Face */
+.cube-bottom {
+  transform: rotateX(-90deg) translateY(-2.5rem);
+  transform-origin: bottom center;
+}
+
+/* Desktop Styles for Cube Faces */
+@media (min-width: 768px) {
+  .cube-front {
+    transform: translateZ(3.25rem);
+  }
+  
+  .cube-right {
+    transform: rotateY(90deg) translateX(3.25rem);
+  }
+  
+  .cube-back {
+    transform: rotateY(180deg) translateZ(3.25rem);
+  }
+  
+  .cube-left {
+    transform: rotateY(-90deg) translateX(-3.25rem);
+  }
+  
+  .cube-top {
+    transform: rotateX(90deg) translateY(3.25rem);
+  }
+  
+  .cube-bottom {
+    transform: rotateX(-90deg) translateY(-3.25rem);
+  }
+}
+
+/* Text Styles */
+.preloader-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: rgb(147, 197, 253);
+  margin-top: 3rem;
+  letter-spacing: 0.1em;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.preloader-subtitle {
+  color: rgb(96, 165, 250);
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Ensure the preloader covers the entire viewport */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
