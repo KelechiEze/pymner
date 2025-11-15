@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
 import AnimatedBackground from "../components/AnimatedBackground";
 import Hero from "../components/Hero";
+import CryptoTicker from "../components/CryptoTicker";
 import InvestmentOpportunity from "../components/InvestmentOpportunity";
 import InvestmentServices from "../components/InvestmentServices";
 import InvestmentPlans from "../components/InvestmentPlans";
@@ -34,6 +35,7 @@ const Index = () => {
       <AnimatedBackground />
       <Navbar />
       <Hero />
+      <CryptoTicker />
       <InvestmentPlans />
       <InvestmentOpportunity />
       <InvestmentServices />
