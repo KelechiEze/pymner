@@ -30,7 +30,8 @@ const AnimatedBackground = () => {
     function animate() {
       if (!canvas || !ctx) return;
       
-      ctx.fillStyle = "rgba(5, 5, 5, 0.1)";
+      // Use your design system's background color with darker opacity
+      ctx.fillStyle = "hsla(0, 0%, 2%, 0.15)"; // Much darker than before
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       nodes.forEach((node) => {
@@ -42,7 +43,8 @@ const AnimatedBackground = () => {
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(147, 112, 219, 0.6)";
+        // Use your primary color with reduced opacity
+        ctx.fillStyle = "hsla(250, 100%, 65%, 0.3)";
         ctx.fill();
       });
 
@@ -56,8 +58,9 @@ const AnimatedBackground = () => {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            const opacity = (1 - distance / connectionDistance) * 0.3;
-            ctx.strokeStyle = `rgba(147, 112, 219, ${opacity})`;
+            const opacity = (1 - distance / connectionDistance) * 0.15; // Reduced opacity
+            // Use your primary color for connections
+            ctx.strokeStyle = `hsla(250, 100%, 65%, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
